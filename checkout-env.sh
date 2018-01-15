@@ -51,7 +51,9 @@ do
 
         echo "======= Checkout repository for '$FOLDER'"
         croot && cd "$FOLDER"
+        git reset --hard
         git fetch $SOURCE_REPO_REMOTE
+        git fetch $CUSTOM_REPO_REMOTE
         git checkout $CUSTOM_REPO_REMOTE/$BRANCH        
         echo
 	COUNT=$(($COUNT + 1))
