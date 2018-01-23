@@ -17,6 +17,7 @@ BRANCH="staging/lineage-15.1"
 
 COUNT=0
 PROJECTS=(
+'art				android_art				github	rebase'
 'bionic				android_bionic				github'
 'build/soong			android_build_soong			github'
 'build/make			android_build				github	rebase'
@@ -36,6 +37,7 @@ PROJECTS=(
 'device/samsung/galaxys2-common	android_device_samsung_galaxys2-common	github'
 'device/samsung/i9100		android_device_samsung_i9100		github'
 'kernel/samsung/smdk4412	android_kernel_samsung_smdk4412		github'
+'libcore			android_libcore				github	rebase'
 )
 
 #Register all custom repositories

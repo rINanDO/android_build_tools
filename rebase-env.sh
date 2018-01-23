@@ -37,6 +37,7 @@ PROJECTS=(
 'device/samsung/galaxys2-common	android_device_samsung_galaxys2-common	github	norebase'
 'device/samsung/i9100		android_device_samsung_i9100		github	norebase'
 'kernel/samsung/smdk4412	android_kernel_samsung_smdk4412		github	norebase'
+'libcore			android_libcore				github	rebase'
 )
 
 echo Cleaning untracked files...
