@@ -38,6 +38,10 @@ PROJECTS=(
 'device/samsung/i9100		android_device_samsung_i9100		github'
 'kernel/samsung/smdk4412	android_kernel_samsung_smdk4412		github'
 'libcore			android_libcore				github	rebase'
+'lineage-sdk			android_lineage-sdk			github	rebase'
+'device/lineage/sepolicy	android_device_lineage_sepolicy		github	rebase'
+'packages/apps/Settings		android_packages_apps_Settings		github	rebase'
+'packages/apps/LineageParts	android_packages_apps_LineageParts	github	rebase'
 )
 
 #Register all custom repositories
