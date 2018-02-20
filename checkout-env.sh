@@ -20,7 +20,6 @@ PROJECTS=(
 'bionic				android_bionic				github	rebase'
 'build/make			android_build				github	rebase'
 'build/soong			android_build_soong			github	rebase'
-'external/stlport		android_external_stlport		github	rebase'
 'frameworks/av			android_frameworks_av			github	rebase'
 'frameworks/base		android_frameworks_base			github	rebase'
 'frameworks/native		android_frameworks_native		github	rebase'

@@ -21,7 +21,6 @@ PROJECTS=(
 'bionic				android_bionic				github'
 'build/soong			android_build_soong			github'
 'build/make			android_build				github	rebase'
-'external/stlport		android_external_stlport		github'
 'frameworks/av			android_frameworks_av			github'
 'frameworks/base		android_frameworks_base			github'
 'frameworks/native		android_frameworks_native		github'
