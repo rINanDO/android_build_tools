@@ -14,7 +14,7 @@ CUSTOM_REPO_URL="https://www.github.com/rinando/"
 SOURCE_REPO_REMOTE="github"
 CUSTOM_REPO_REMOTE="rinando"
 
-BRANCH="staging/lineage-15.1"
+BRANCH="lineage-15.1"
 
 COUNT=0
 PROJECTS=(
