@@ -2,9 +2,19 @@
 
 #SETUP environment
 cd ~/android/system
-repo sync
-. build/envsetup.sh
-breakfast i9100
+
+echo -n "OK to sync repo (y/N)? "
+read USERINPUT
+case $USERINPUT in
+ y|Y)
+	echo "Synching..."
+        repo sync
+        . build/envsetup.sh
+        breakfast i9100
+ ;;
+ *) ;;
+esac
+
 
 CURRENT_DIR="$PWD"
 
@@ -41,6 +51,7 @@ PROJECTS=(
 'device/lineage/sepolicy	android_device_lineage_sepolicy		github	rebase'
 'packages/apps/Settings		android_packages_apps_Settings		github	rebase'
 'packages/apps/LineageParts	android_packages_apps_LineageParts	github	rebase'
+'vendor/samsung			proprietary_vendor_samsung		github	rebase'
 )
 
 echo Cleaning untracked files...
