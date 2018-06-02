@@ -1,21 +1,5 @@
 #!/bin/bash
 
-#SETUP environment
-cd ~/android/system
-
-echo -n "OK to sync repo (y/N)? "
-read USERINPUT
-case $USERINPUT in
- y|Y)
-	echo "Synching..."
-        repo sync
-        . build/envsetup.sh
-        breakfast i9100
- ;;
- *) ;;
-esac
-
-
 CURRENT_DIR="$PWD"
 
 SOURCE_REPO_URL="https://www.github.com/lineageos"
@@ -54,6 +38,41 @@ PROJECTS=(
 'vendor/samsung			proprietary_vendor_samsung		github	rebase'
 )
 
+# Sync repo
+cd ~/android/system
+
+echo Stashing your work...
+while [ "x${PROJECTS[COUNT]}" != "x" ]
+do
+	CURRENT="${PROJECTS[COUNT]}"
+	FOLDER=`echo "$CURRENT" | awk '{print $1}'`
+	REPOSITORY=`echo "$CURRENT" | awk '{print $2}'`
+        SOURCE_REPO_REMOTE=`echo "$CURRENT" | awk '{print $3}'`
+        REBASE_ACTION=`echo "$CURRENT" | awk '{print $4}'`
+	GIT_REPO_URL=`echo "$CUSTOM_REPO_URL$REPOSITORY"`
+
+        echo "======= Stashing repository '$FOLDER' =========="
+        croot && cd "$FOLDER"
+        git stash
+        echo "========================================================================"
+	COUNT=$(($COUNT + 1))
+done
+
+COUNT=0
+echo -n "OK to sync repo (y/N)? "
+read USERINPUT
+case $USERINPUT in
+ y|Y)
+	echo "Synching..."
+        repo sync
+        . build/envsetup.sh
+        breakfast i9100
+ ;;
+ *) ;;
+esac
+
+
+
 echo Cleaning untracked files...
 repo forall -vc "git clean -f"
 
@@ -75,6 +94,7 @@ do
         case $REBASE_ACTION in
          rebase )
 		git rebase $SOURCE_REPO_REMOTE/$BRANCH
+                git stash apply
 		echo -n "OK to push to repo (y/N)? "
 		read USERINPUT
 		case $USERINPUT in
