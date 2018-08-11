@@ -25,7 +25,6 @@ PROJECTS=(
 'hardware/lineage/interfaces	android_hardware_lineage_interfaces	github	rebase'
 'hardware/samsung		android_hardware_samsung		github	rebase'
 'packages/services/Telephony	android_packages_services_Telephony	github	rebase'
-'system/connectivity/wificond	android_system_connectivity_wificond	aosp	norebase'
 'system/core			android_system_core			github	rebase'
 'device/samsung/galaxys2-common	android_device_samsung_galaxys2-common	github	norebase'
 'device/samsung/i9100		android_device_samsung_i9100		github	norebase'

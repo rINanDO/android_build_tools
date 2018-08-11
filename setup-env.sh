@@ -31,7 +31,6 @@ PROJECTS=(
 'hardware/lineage/interfaces	android_hardware_lineage_interfaces	github'
 'hardware/samsung		android_hardware_samsung		github'
 'packages/services/Telephony	android_packages_services_Telephony	github'
-'system/connectivity/wificond	android_system_connectivity_wificond	github'
 'system/core			android_system_core			github'
 'device/samsung/galaxys2-common	android_device_samsung_galaxys2-common	github'
 'device/samsung/i9100		android_device_samsung_i9100		github'

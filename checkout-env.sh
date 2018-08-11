@@ -28,19 +28,18 @@ PROJECTS=(
 'hardware/interfaces		android_hardware_interfaces		github	rebase'
 'hardware/libhardware		android_hardware_libhardware		github	rebase'
 'hardware/lineage/interfaces	android_hardware_lineage_interfaces	github	rebase'
+'hardware/samsung		android_hardware_samsung		github	rebase'
 'packages/services/Telephony	android_packages_services_Telephony	github	rebase'
-'system/connectivity/wificond	android_system_connectivity_wificond	aosp	norebase'
 'system/core			android_system_core			github	rebase'
+'device/samsung/galaxys2-common	android_device_samsung_galaxys2-common	github	norebase'
+'device/samsung/i9100		android_device_samsung_i9100		github	norebase'
+'kernel/samsung/smdk4412	android_kernel_samsung_smdk4412		github	norebase'
 'libcore			android_libcore				github	rebase'
 'lineage-sdk			android_lineage-sdk			github	rebase'
 'device/lineage/sepolicy	android_device_lineage_sepolicy		github	rebase'
 'packages/apps/Settings		android_packages_apps_Settings		github	rebase'
 'packages/apps/LineageParts	android_packages_apps_LineageParts	github	rebase'
-
-'hardware/samsung		android_hardware_samsung		github	rebase'
-'device/samsung/galaxys2-common	android_device_samsung_galaxys2-common	github	norebase'
-'device/samsung/i9100		android_device_samsung_i9100		github	norebase'
-'kernel/samsung/smdk4412	android_kernel_samsung_smdk4412		github	norebase'
+'vendor/samsung			proprietary_vendor_samsung		github	rebase'
 )
 
 #Register all custom repositories
