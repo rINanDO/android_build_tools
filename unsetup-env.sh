@@ -8,7 +8,7 @@ if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
 CURRENT_DIR="$PWD"
 COUNT=0
 
-#Register repositories
+#Restore original repositories
 while [ "x${PROJECTS[COUNT]}" != "x" ]
 do
 	CURRENT="${PROJECTS[COUNT]}"
@@ -25,17 +25,12 @@ do
 	GIT_REPO_URL=`echo "https://github.com/$TARGET_REPONAME/$REPOSITORY"`
 
         echo "===================================================="
-        echo "Registering repository for $FOLDER"
+        echo "Unregistering repository for $FOLDER"
         echo "===================================================="
-        croot && mkdir -p "$FOLDER" && cd "$FOLDER" && git init
-        FOUND=`git remote -v|grep "$TARGET_REPONAME"`
-        if [ -z "$FOUND" ]; then
-            git remote add $TARGET_REPONAME $GIT_REPO_URL
-        fi
-        git fetch $TARGET_REPONAME
-        git checkout $TARGET_REPONAME/$TARGET_BRANCH
-        git config credential.helper store
-        echo ""
+        croot && cd "$FOLDER" && git remote remove $TARGET_REPONAME
+        croot && rm -rf "$FOLDER"
+        repo sync $FOLDER
+	echo ""
 	COUNT=$(($COUNT + 1))
 done
 
