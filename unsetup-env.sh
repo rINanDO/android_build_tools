@@ -27,7 +27,8 @@ do
         echo "===================================================="
         echo "Unregistering repository for $FOLDER"
         echo "===================================================="
-        croot && cd "$FOLDER" && git remote remove $TARGET_REPONAME
+
+        croot && cd "$FOLDER" && git config --unset credential.helper && git remote remove $TARGET_REPONAME
         croot && rm -rf "$FOLDER"
         repo sync $FOLDER
 	echo ""

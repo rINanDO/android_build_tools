@@ -8,6 +8,10 @@ if [[ ! -d "$DIR" ]]; then DIR="$PWD"; fi
 CURRENT_DIR="$PWD"
 COUNT=0
 
+cd ~/android/system
+. build/envsetup.sh
+cd $CURRENT_DIR
+
 #Register repositories
 while [ "x${PROJECTS[COUNT]}" != "x" ]
 do
@@ -34,7 +38,6 @@ do
         fi
         git fetch $TARGET_REPONAME
         git checkout $TARGET_REPONAME/$TARGET_BRANCH
-        git config credential.helper store
         echo ""
 	COUNT=$(($COUNT + 1))
 done
