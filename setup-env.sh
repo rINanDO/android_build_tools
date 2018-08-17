@@ -9,6 +9,7 @@ CURRENT_DIR="$PWD"
 COUNT=0
 
 cd ~/android/system
+repo sync --force-sync
 . build/envsetup.sh
 cd $CURRENT_DIR
 
