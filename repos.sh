@@ -9,6 +9,7 @@ PROJECTS=(
 'device/samsung/galaxys2-common	android_device_samsung_galaxys2-common	.	.	 	rinando	lineage-16.0	checkout'
 'hardware/samsung		android_hardware_samsung		.	.	 	rinando	lineage-16.0	checkout'
 'kernel/samsung/smdk4412	android_kernel_samsung_smdk4412		.	.		rinando	lineage-16.0	checkout'
+'bootable/recovery		android_bootable_recovery		github	lineage-16.0 	rinando	lineage-16.0	rebase'
 'hardware/ril			android_hardware_ril			github	lineage-16.0 	rinando	lineage-16.0	rebase'
 'bionic				android_bionic				github	lineage-16.0 	rinando	lineage-16.0	rebase'
 'build/make			android_build				github	lineage-16.0 	rinando	lineage-16.0	rebase'
@@ -18,6 +19,5 @@ PROJECTS=(
 'frameworks/native		android_frameworks_native		github	lineage-16.0 	rinando	lineage-16.0	rebase'
 'vendor/lineage			android_vendor_lineage			github	lineage-16.0 	rinando	lineage-16.0	rebase'
 'system/core			android_system_core			github	lineage-16.0 	rinando	lineage-16.0	rebase'
-
 )
 
