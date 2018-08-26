@@ -38,6 +38,8 @@ do
             git remote add $TARGET_REPONAME $GIT_REPO_URL
         fi
         git fetch $TARGET_REPONAME
+	git add -A
+	git reset --hard
         git checkout $TARGET_REPONAME/$TARGET_BRANCH
         echo ""
 	COUNT=$(($COUNT + 1))
