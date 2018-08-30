@@ -19,5 +19,6 @@ PROJECTS=(
 'frameworks/native		android_frameworks_native		github	lineage-16.0 	rinando	lineage-16.0	rebase'
 'vendor/lineage			android_vendor_lineage			github	lineage-16.0 	rinando	lineage-16.0	rebase'
 'system/core			android_system_core			github	lineage-16.0 	rinando	lineage-16.0	rebase'
+'system/vold			android_system_vold			github	lineage-16.0 	rinando	lineage-16.0	rebase'
 )
 
