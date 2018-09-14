@@ -59,6 +59,7 @@ do
 
         echo "======= Rebasing repository for '$FOLDER' $ACTION =========="
         croot && cd "$FOLDER"
+	git config credential.helper store
         case $ACTION in
          rebase )
 	        git fetch $SOURCE_REPONAME
@@ -82,6 +83,7 @@ do
 		git cherry-pick $PARAM2
 		;;
 	  checkout )
+		git fetch $TARGET_REPONAME
 		git checkout $TARGET_REPONAME/$TARGET_BRANCH
 		;;		
 	esac
