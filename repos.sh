@@ -24,5 +24,6 @@ PROJECTS=(
 'system/extras			android_system_extras			github	lineage-16.0	rinando	lineage-16.0	rebase'
 'system/extras/su		android_system_extras_su		github	lineage-16.0	rinando	lineage-16.0	rebase'
 'system/netd			android_system_netd			github	lineage-16.0	rinando	lineage-16.0	rebase'
+'packages/apps/Settings		android_packages_apps_Settings		github	lineage-16.0	rinando	lineage-16.0	rebase'
 )
 
