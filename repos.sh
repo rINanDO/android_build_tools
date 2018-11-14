@@ -8,6 +8,7 @@ PROJECTS=(
 'device/samsung/i9100		android_device_samsung_i9100		.	.	 	rinando	lineage-16.0	checkout'
 'device/samsung/galaxys2-common	android_device_samsung_galaxys2-common	.	.	 	rinando	lineage-16.0	checkout'
 'hardware/samsung		android_hardware_samsung		.	.	 	rinando	lineage-16.0	checkout'
+'hardware/broadcom/libbt	android_hardware_broadcom_libbt		.	.	 	rinando	lineage-16.0	checkout'
 'kernel/samsung/smdk4412	android_kernel_samsung_smdk4412		.	.		rinando	lineage-16.0	checkout'
 'bootable/recovery		android_bootable_recovery		github	lineage-16.0 	rinando	lineage-16.0	rebase'
 'hardware/ril			android_hardware_ril			github	lineage-16.0 	rinando	lineage-16.0	rebase'
