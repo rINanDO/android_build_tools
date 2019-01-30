@@ -12,7 +12,6 @@ PROJECTS=(
 'kernel/samsung/smdk4412	android_kernel_samsung_smdk4412		.	.		rinando	lineage-16.0	checkout'
 'bootable/recovery		android_bootable_recovery		github	lineage-16.0 	rinando	lineage-16.0	rebase'
 'hardware/ril			android_hardware_ril			github	lineage-16.0 	rinando	lineage-16.0	rebase'
-'bionic				android_bionic				github	lineage-16.0 	rinando	lineage-16.0	rebase'
 'build/make			android_build				github	lineage-16.0 	rinando	lineage-16.0	rebase'
 'build/soong			android_build_soong			github	lineage-16.0 	rinando	lineage-16.0	rebase'
 'frameworks/av			android_frameworks_av			github	lineage-16.0 	rinando	lineage-16.0	rebase'
