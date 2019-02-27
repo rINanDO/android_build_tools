@@ -3,22 +3,13 @@ SOURCE_REPO_URL="https://www.github.com/lineageos"
 CUSTOM_REPO_URL="https://www.github.com/rinando/"
 
 PROJECTS=(
-'device/lineage/sepolicy	android_device_lineage_sepolicy		.	.	 	rinando	lineage-16.0	checkout'
 'vendor/samsung			proprietary_vendor_samsung		.	.		rinando	lineage-16.0	checkout'
 'device/samsung/i9100		android_device_samsung_i9100		.	.	 	rinando	lineage-16.0	checkout'
 'device/samsung/galaxys2-common	android_device_samsung_galaxys2-common	.	.	 	rinando	lineage-16.0	checkout'
 'hardware/samsung		android_hardware_samsung		.	.	 	rinando	lineage-16.0	checkout'
-'hardware/broadcom/libbt	android_hardware_broadcom_libbt		.	.	 	rinando	lineage-16.0	checkout'
 'kernel/samsung/smdk4412	android_kernel_samsung_smdk4412		.	.		rinando	lineage-16.0	checkout'
 'build/make			android_build				github	lineage-16.0 	rinando	lineage-16.0	rebase'
-'build/soong			android_build_soong			github	lineage-16.0 	rinando	lineage-16.0	rebase'
 'frameworks/base		android_frameworks_base			github	lineage-16.0 	rinando	lineage-16.0	rebase'
-'frameworks/native		android_frameworks_native		github	lineage-16.0 	rinando	lineage-16.0	rebase'
 'system/core			android_system_core			github	lineage-16.0 	rinando	lineage-16.0	rebase'
-'system/vold			android_system_vold			github	lineage-16.0 	rinando	lineage-16.0	rebase'
-'system/extras			android_system_extras			github	lineage-16.0	rinando	lineage-16.0	rebase'
-'system/extras/su		android_system_extras_su		github	lineage-16.0	rinando	lineage-16.0	rebase'
-'packages/apps/Settings		android_packages_apps_Settings		github	lineage-16.0	rinando	lineage-16.0	rebase'
-'packages/apps/LineageParts	android_packages_apps_LineageParts	github	lineage-16.0	rinando	lineage-16.0	rebase'
 )
 
