@@ -8,8 +8,6 @@ PROJECTS=(
 'device/samsung/galaxys2-common	android_device_samsung_galaxys2-common	.	.	 	rinando	lineage-16.0	checkout'
 'hardware/samsung		android_hardware_samsung		.	.	 	rinando	lineage-16.0	checkout'
 'kernel/samsung/smdk4412	android_kernel_samsung_smdk4412		.	.		rinando	lineage-16.0	checkout'
-'build/make			android_build				github	lineage-16.0 	rinando	lineage-16.0	rebase'
 'frameworks/base		android_frameworks_base			github	lineage-16.0 	rinando	lineage-16.0	rebase'
-'system/core			android_system_core			github	lineage-16.0 	rinando	lineage-16.0	rebase'
 )
 
