@@ -9,7 +9,6 @@ PROJECTS=(
 'hardware/samsung		android_hardware_samsung		.	.	 	rinando	lineage-16.0	checkout'
 'kernel/samsung/smdk4412	android_kernel_samsung_smdk4412		.	.		rinando	lineage-16.0	checkout'
 'frameworks/base		android_frameworks_base			github	lineage-16.0 	rinando	lineage-16.0	rebase'
-'frameworks/native		android_frameworks_native		github	lineage-16.0 	rinando	lineage-16.0	rebase'
 'build/make			android_build				github	lineage-16.0 	rinando	lineage-16.0	rebase'
 )
 
