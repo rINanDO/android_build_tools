@@ -24,6 +24,8 @@ do
 done
 
 COUNT=0
+
+breakfast i9100
 echo -n "OK to sync repo (y/N)? "
 read USERINPUT
 case $USERINPUT in
@@ -31,7 +33,6 @@ case $USERINPUT in
 	echo "Synching..."
         repo sync
         . build/envsetup.sh
-        breakfast i9100
  ;;
  *) ;;
 esac
@@ -47,15 +48,15 @@ while [ "x${PROJECTS[COUNT]}" != "x" ]
 do
 	CURRENT="${PROJECTS[COUNT]}"
 	FOLDER=`echo "$CURRENT" | awk '{print $1}'`
-	REPOSITORY=`echo "$CURRENT" | awk '{print $2}'`
+	SOURCE_REPOSITORY=`echo "$CURRENT" | awk '{print $2}'`
         SOURCE_REPONAME=`echo "$CURRENT" | awk '{print $3}'`
         SOURCE_BRANCH=`echo "$CURRENT" | awk '{print $4}'`
-	TARGET_REPONAME=`echo "$CURRENT" | awk '{print $5}'`
-        TARGET_BRANCH=`echo "$CURRENT" | awk '{print $6}'`
-        ACTION=`echo "$CURRENT" | awk '{print $7}'`
-        PARAM1=`echo "$CURRENT" | awk '{print $8}'`
-        PARAM2=`echo "$CURRENT" | awk '{print $9}'`
-	GIT_REPO_URL=`echo "https://github.com/$TARGET_REPONAME/$REPOSITORY"`
+	TARGET_REPOSITORY=`echo "$CURRENT" | awk '{print $5}'`
+	TARGET_REPONAME=`echo "$CURRENT" | awk '{print $6}'`
+        TARGET_BRANCH=`echo "$CURRENT" | awk '{print $7}'`
+        ACTION=`echo "$CURRENT" | awk '{print $8}'`
+        PARAM1=`echo "$CURRENT" | awk '{print $9}'`
+        PARAM2=`echo "$CURRENT" | awk '{print $10}'`
 
         echo "======= Rebasing repository for '$FOLDER' $ACTION =========="
         croot && cd "$FOLDER"
