@@ -9,7 +9,7 @@ CURRENT_DIR="$PWD"
 COUNT=0
 
 cd ~/android/system
-#repo sync --force-sync
+repo sync --force-sync
 . build/envsetup.sh
 cd $CURRENT_DIR
 
@@ -40,14 +40,18 @@ do
              fi
              git fetch $SOURCE_REPONAME
         fi
-        FOUND=`git remote -v|grep "$TARGET_REPONAME"`
-        if [ -z "$FOUND" ]; then
-            git remote add $TARGET_REPONAME $TARGET_REPOSITORY
+        if [ $ACTION == "checkout" ]; then
+            git checkout $SOURCE_REPONAME/$SOURCE_BRANCH
+        else 
+            FOUND=`git remote -v|grep "$TARGET_REPONAME"`
+            if [ -z "$FOUND" ]; then
+                git remote add $TARGET_REPONAME $TARGET_REPOSITORY
+            fi
+            git fetch $TARGET_REPONAME
+            git add -A
+            git reset --hard
+            git checkout $TARGET_REPONAME/$TARGET_BRANCH
         fi
-        git fetch $TARGET_REPONAME
-	git add -A
-	git reset --hard
-        git checkout $TARGET_REPONAME/$TARGET_BRANCH
         echo ""
 	COUNT=$(($COUNT + 1))
 done
