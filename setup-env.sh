@@ -34,7 +34,7 @@ do
         croot && mkdir -p "$FOLDER" && cd "$FOLDER" && git init
         git config credential.helper store
         if [ $SOURCE_REPONAME != "github" ]; then
-             FOUND=`git remote -v|grep "$SOURCE_REPONAME"`
+             FOUND=`git remote -v|grep "^$SOURCE_REPONAME"`
              if [ -z "$FOUND" ]; then
                  git remote add $SOURCE_REPONAME $SOURCE_REPOSITORY
              fi
@@ -43,7 +43,7 @@ do
         if [ $ACTION == "checkout" ]; then
             git checkout $SOURCE_REPONAME/$SOURCE_BRANCH
         else 
-            FOUND=`git remote -v|grep "$TARGET_REPONAME"`
+            FOUND=`git remote -v|grep "^$TARGET_REPONAME"`
             if [ -z "$FOUND" ]; then
                 git remote add $TARGET_REPONAME $TARGET_REPOSITORY
             fi
