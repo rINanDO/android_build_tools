@@ -9,8 +9,20 @@ CURRENT_DIR="$PWD"
 COUNT=0
 
 cd ~/android/system
+
+echo -n "OK to sync repo (y/N)? "
+read USERINPUT
+case $USERINPUT in
+ y|Y)
+	echo "Synching..."
 repo sync --force-sync
+ ;;
+ *) ;;
+esac
+
 . build/envsetup.sh
+
+
 cd $CURRENT_DIR
 
 #Register repositories
