@@ -33,13 +33,11 @@ do
         echo "===================================================="
         croot && mkdir -p "$FOLDER" && cd "$FOLDER" && git init
         git config credential.helper store
-        if [ $SOURCE_REPONAME != "github" ]; then
-             FOUND=`git remote -v|grep "$SOURCE_REPONAME"`
-             if [ -z "$FOUND" ]; then
-                 git remote add $SOURCE_REPONAME $SOURCE_REPOSITORY
-             fi
-             git fetch $SOURCE_REPONAME
-        fi
+	FOUND=`git remote -v|grep "$SOURCE_REPONAME"`
+	if [ -z "$FOUND" ]; then
+		git remote add $SOURCE_REPONAME $SOURCE_REPOSITORY
+	fi
+	git fetch $SOURCE_REPONAME
         if [ $ACTION == "checkout" ]; then
             git checkout $SOURCE_REPONAME/$SOURCE_BRANCH
         else 
