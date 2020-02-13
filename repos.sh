@@ -3,7 +3,7 @@ SOURCE_REPO_URL="https://www.github.com/lineageos"
 CUSTOM_REPO_URL="https://www.github.com/rinando/"
 
 PROJECTS=(
-'system/libhwbinder	https://android.googlesource.com/platform/system/libhwbinder	aosp	refs/tags/android-10.0.0_r23 	https://github.com/rinando/android_system_libhwbinder	rinando	lineage-17.1	rebase'
+'system/libhwbinder	https://android.googlesource.com/platform/system/libhwbinder	aosp	tags/android-10.0.0_r23 	https://github.com/rinando/android_system_libhwbinder	rinando	lineage-17.1	rebase'
 'frameworks/base	https://github.com/lineageos/android_frameworks_base	github	lineage-17.1 	https://github.com/rinando/android_frameworks_base	rinando	lineage-17.1	rebase'
 'vendor/samsung	https://github.com/themuppets/proprietary_vendor_samsung	themuppets	lineage-17.1	https://github.com/rinando/proprietary_vendor_samsung	rinando	lineage-17.1	rebase'
 'hardware/samsung	https://github.com/lineageos/android_hardware_samsung	github	lineage-17.1 	https://github.com/rinando/android_hardware_samsung	rinando	lineage-17.1	rebase'
