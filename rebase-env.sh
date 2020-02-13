@@ -58,6 +58,8 @@ do
         PARAM1=`echo "$CURRENT" | awk '{print $9}'`
         PARAM2=`echo "$CURRENT" | awk '{print $10}'`
 
+	SOURCE_BRANCH_IS_NOT_A_TAG=`echo "$SOURCE_BRANCH"|grep tags`
+
         echo "======= Rebasing repository for '$FOLDER' $ACTION =========="
         croot && cd "$FOLDER"
 	git config credential.helper store
@@ -66,7 +68,12 @@ do
 	        git fetch $SOURCE_REPONAME
 	        git fetch $TARGET_REPONAME
 	        git checkout $TARGET_REPONAME/$TARGET_BRANCH
-		git rebase $SOURCE_REPONAME/$SOURCE_BRANCH
+		if [ -z "$SOURCE_BRANCH_IS_NOT_A_TAG" ]; then
+			git rebase $SOURCE_REPONAME/$SOURCE_BRANCH
+		else
+			git rebase $SOURCE_BRANCH
+		fi
+
                 git stash apply
 		echo -n "OK to push to repo (y/N)? "
 		read USERINPUT
