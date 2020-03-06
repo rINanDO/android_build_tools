@@ -11,9 +11,7 @@ PROJECTS=(
 'device/samsung/i9100	https://github.com/lineageos/android_device_samsung_i9100	github	lineage-17.0 	https://github.com/rinando/android_device_samsung_i9100	rinando	lineage-17.1	checkout'
 'device/samsung/smdk4412-common	https://github.com/lineageos/android_device_samsung_smdk4412-common	github	cm-14.1	https://github.com/rinando/android_device_samsung_smdk4412-common	rinando	lineage-17.1	checkout'
 'device/samsung/i9300	https://github.com/lineageos/android_device_samsung_i9300	github	cm-14.1 	https://github.com/rinando/android_device_samsung_i9300	rinando	lineage-17.1	checkout'
-'hardware/ril	https://github.com/lineageos/android_hardware_ril	github	lineage-17.1 	https://github.com/rinando/android_hardware_ril	rinando	lineage-17.1	rebase'
 'kernel/samsung/smdk4412	https://github.com/lineageos/android_kernel_samsung_smdk4412	github	lineage-17.0 	https://github.com/rinando/android_kernel_samsung_smdk4412			rinando	lineage-17.1	checkout'
-'build/make	https://github.com/lineageos/android_build	github	lineage-17.1 	https://github.com/rinando/android_build	rinando	lineage-17.1	rebase'
 'bionic	https://github.com/lineageos/android_bionic	github	lineage-17.1 	https://github.com/rinando/android_bionic	rinando	lineage-17.1	rebase'
 )
 
