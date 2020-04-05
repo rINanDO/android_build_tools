@@ -13,5 +13,6 @@ PROJECTS=(
 'device/samsung/i9300	https://github.com/lineageos/android_device_samsung_i9300	github	cm-14.1 	https://github.com/rinando/android_device_samsung_i9300	rinando	lineage-17.1	checkout'
 'kernel/samsung/smdk4412	https://github.com/lineageos/android_kernel_samsung_smdk4412	github	lineage-17.0 	https://github.com/rinando/android_kernel_samsung_smdk4412			rinando	lineage-17.1	checkout'
 'bionic	https://github.com/lineageos/android_bionic	github	lineage-17.1 	https://github.com/rinando/android_bionic	rinando	lineage-17.1	rebase'
+'packages/apps/Snap	https://github.com/lineageos/android_packages_apps_snap	github	lineage-17.1 	https://github.com/rinando/android_packages_apps_snap	rinando	lineage-17.1	rebase'
 )
 
