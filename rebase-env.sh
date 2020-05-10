@@ -31,7 +31,7 @@ read USERINPUT
 case $USERINPUT in
  y|Y)
 	echo "Synching..."
-        repo sync
+        repo sync --force-sync
         . build/envsetup.sh
  ;;
  *) ;;
